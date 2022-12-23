@@ -1,0 +1,27 @@
+ALGORITHM decript
+VAR
+    str : ARRAY_OF_STRING
+    str_vowels :ARRAY_OF_STRING
+    n,nv,i,j,l : INTEGER
+BEGIN
+    Read (str)
+    str_vowels:=["a","A","e","E","i","I","u","U","o","O"]
+    l:=str.lenght
+    n:=1
+    nv:=0
+    FOR i FROM 0 TO l STEP 1  DO
+        IF (str[i]=" ") THEN
+        n:=n+1
+        END_IF
+    END_FOR
+    FOR i FROM 0 TO l STEP 1  DO
+        FOR j FROM 0 TO str_vowels.length STEP 1  DO
+            IF (str[i]=str_vowels[j]) THEN
+                nv:=nv+1
+            END_IF
+        END_FOR
+    END_FOR
+    write("The number of carachters is",l)
+    write("The number of vowels is",nv)
+    write("The number of word is",n)
+END
